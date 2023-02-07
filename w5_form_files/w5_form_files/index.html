@@ -15,171 +15,219 @@
 <body>
     <!--Build your Table and Form here-->
         
-    <h1>Basic Form Demo</h1>
+    <h1>Birthday Party Registration Form</h1>
 
-    <h2>Form w/o Table</h2>
-
-    <!--text: text fields for manual entry by user - value becomes what user types-->
-    <form>
-
-        <!--first name-->
-        <label for="firstName">First Name: </label>
-        <input type="text" name="firstName" id="first-name-input">
-
-        <!--labels are used to match up with input elements
-        
-            for attribute value connects label element with input element
-            name attribute value connects input element with label element
-
-        -->
-        <br>
-        <!--last name-->
-        <label for="lastName">Last Name: </label>
-        <input type="text" name="lastName" id="last-name-input">
-
-        <br>
-        <!--email-->
-        <label for="email">Email: </label>
-        <input type="text" name="email" id="email-input">
-
-        <br>
-        <!--submit button - REQUIRED for any form with > 1 input field-->
-        <input type="submit" value="SUBMIT">
-
-    </form>
-
-    <h2>Form w/ Table</h2>
-    <!--using tables to align and space data for ease of ues-->
-
-    <!--FORM COMES FIRST!!!!-->
     <form method="GET" action="HTML/JS FILE NAME/PATH">
         <Table>
-            <tbody><!--required for ALL tables-->
-
-                <!--tbody is populated row by row, top down-->
-                <tr><!--table ROW: should include one <td></td> for every possible column, leave blank when no info for that column-->
-
-
-                    <td><!--label column-->
-                        <label for="firstname">First Name:</label>
-                    </td>
-
-                    <td><!--input column-->
-                        <input type="text" name="firstname" id="first-name-2-input">
-                    </td>
-
-                </tr>
-
+            <thead>
                 <tr>
-
-
-                    <td><!--label column-->
-                        <label for="lastname">Last Name:</label>
+                    <td>
+                        <label>Labels</label>
                     </td>
 
-                    <td><!--input column-->
-                        <input type="text" name="lastname" id="last-name-2-input">
+                    <td>
+                        <label>Form Fields</label>
                     </td>
-                    
                 </tr>
-
-                <tr>
-
-
-                    <td><!--label column-->
-                        <label for="email2">Email:</label>
-                    </td>
-
-                    <td><!--input column-->
-                        <input type="text" name="email2" id="email-2-input" maxlength="5" placeholder="email@email.com">
-                    </td>
-                    
-                </tr>
-
-                <!--NON-TEXT INPUT-->
-                <tr>
-
-                    <td>
-                        <label for="favColor">Pick Your Favorite Color: </label>
-                    </td>
-
-                    <td>
-                        <!--drop-down selection options-->
-                        <select name="favColor"><!--creating the drop down-->
-
-                            <!--each <option> element holds an option to pick from the drop down-->
-                                <option value="red">RED</option>
-                                <option value="green">GREEN</option>
-                                <option value="blue">BLUE</option>
-
-                                
-
-                        </select>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <!--radio buttons - restricted to ONE option from name value group-->
-                    <td>
-                        <label for="study">Program of Study</label>
-                    </td>
-
-                    <td>
-                        <input type="radio" name="study" value="SE">Software Engineering <br>
-                        <input type="radio" name="study" value="CYB">Cybersecurity <br>
-                        <input type="radio" name="study" value="WB">Web Development <br>
-                    </td>
+                <tbody><!--required for ALL tables-->
 
 
-                </tr>
-
-                <tr>
-
-                    <td>
-                        <label for="date">Date:</label>
-                    </td>
-
-                    <td>
-                        <input type="date" name="date">
-                    </td>
+                    <!--tbody is populated row by row, top down-->
+                    <tr><!--table ROW: should include one <td></td> for every possible column, leave blank when no info for that column-->
 
 
-                </tr>
+                        <td><!--label column-->
+                            <label for="gfirst">Parent/Guardian Name</label>
+                        </td>
 
-                <!--checkboxes allow for MULTIPLE responses-->
-                <tr>
+                        <td><!--input column-->
+                            <input type="text" name="gfirst" id="g-first" placeholder="First Name" maxlength="20" required><br>
+                            <input type="text" name="gfirst" id="g-last" placeholder="Last Name" maxlength="20" required>
+                        </td>
 
-                    <td>
-                        <label for="vehicle">Select your Vehicle: </label>
-                    </td>
+                    </tr>
 
-                    <td>
-                        <input type="checkbox" name="vehicle1" value="car">CAR <br>
-                        <input type="checkbox" name="vehicle2" value="roci">ROCINANTE <br>
-                        <input type="checkbox" name="vehicle3" value="motorcycle">MOTORCYCLE <br>
-                        <input type="checkbox" name="vehicle4" value="bike">BICYCLE <br>
-                        <input type="checkbox" name="vehicle5" value="dragon">DRAGON <br>
-                        <input type="checkbox" name="vehicle6" value="horse">ROACH <br>
-                    </td>
+                    <tr>
 
 
-                </tr>
+                        <td><!--label column-->
+                            <label for="cfirst">Child's First Name</label>
+                        </td>
 
-
-                <tr>
-
-
-                    <td><!--label column-->
+                        <td><!--input column-->
+                            <input type="text" name="cfirst" id="c-first" placeholder="Child's First Name" required>
+                        </td>
                         
-                    </td>
+                    </tr>
 
-                    <td><!--input column-->
-                        <input type="submit" value="SUBMIT">
-                    </td>
-                    
-                </tr>
-            </tbody>
+                    <tr>
+
+
+                        <td><!--label column-->
+                            <label for="age">Child's Age</label>
+                        </td>
+
+                        <td><!--input column-->
+                            <input type="text" name="age" required value="3">
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label><h2>Date and Time</h2></label>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label for="date">Date:</label>
+                        </td>
+
+                        <td>
+                            <input type="date" name="date">
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label for="time">Start Time</label>
+                        </td>
+
+                        <td>
+                            <input type="time" name="time" required>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label for="guests">Number of Guests</label>
+                        </td>
+
+                        <td>
+                            <input type="number" name="guests" value="5">
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label><h2>Food</h2></label>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--radio buttons - restricted to ONE option from name value group-->
+                        <td>
+                            <label for="size">Size</label>
+                        </td>
+
+                        <td>
+                            <input type="radio" name="size" value="SM">sm 
+                            <input type="radio" name="size" value="MED">med 
+                            <input type="radio" name="size" value="LG">lg
+                        </td>
+
+
+                    </tr>
+
+                    <!--checkboxes allow for MULTIPLE responses-->
+                    <tr>
+
+                        <td>
+                            <label for="drinks">Drinks </label>
+                        </td>
+
+                        <td>
+                            <input type="checkbox" name="drink1" value="coke">Coke <br>
+                            <input type="checkbox" name="drink2" value="sprite">Sprite <br>
+                            <input type="checkbox" name="drink3" value="fruitpunch">Fruit Punch <br>
+                            <input type="checkbox" name="drink4" value="lemonade">Lemonade <br>
+                            <input type="checkbox" name="drink5" value="icedtea">Iced Tea <br>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label for="cake">Cake</label>
+                        </td>
+
+                        <td>
+                            <select name="cake">
+                                <option>Chocolate</option>
+                                <option>Vanilla</option>
+                                <option>I'll bring my own</option>
+                            </select>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label><h2>Decorations</h2></label>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label for="colors">Color Scheme</label>
+                        </td>
+
+                        <td>
+                            <input type="color" name="color">
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <label for="comments">Additional Comments</label>
+                        </td>
+
+                        <td>
+                            <textarea name="comments" placeholder="Please add any additional comments here"></textarea>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+
+
+                        <td><!--label column-->
+                            
+                        </td>
+
+                        <td><!--input column-->
+                            <input type="submit" value="SUBMIT">
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </thead>
         </Table>
     </form>
     
