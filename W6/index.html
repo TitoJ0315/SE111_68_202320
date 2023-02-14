@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Tito Villacorta">
+    <meta name="description" content="Week 6 | JavaScript Pay Calculator">
+    <title>Week 6 | JavaScript Pay Calculator</title>
+</head>
+<body>
+
+    <script>
+        var grossPay = Number(prompt(`Enter Your Gross Pay: `))
+        console.log("Gross Pay: $" + grossPay.toFixed(2))
+        var tax = .20
+
+        var netPay = grossPay * tax
+        console.log("Uncle Sam's Share: $" + netPay.toFixed(2))
+
+        var share = grossPay - netPay
+        console.log("Net Pay: $" + share.toFixed(2))
+
+        alert(`Gross Pay: $${grossPay.toFixed(2)} \nUncle Sam's Share: $${netPay.toFixed(2)} \nNet Pay: $${share.toFixed(2)}`)
+
+
+
+    </script>
+
+</body>
+</html>
